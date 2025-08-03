@@ -127,7 +127,7 @@ A Dockerfile is similar to a Makefile.
   use double-quotes (") around words not single-quotes (').
 
   ```
-  FROM ubuntu
+  FROM ubuntu:24.10
   CMD echo "This is a test." | wc -
   ```
 
@@ -137,7 +137,7 @@ A Dockerfile is similar to a Makefile.
   as strings in the array:
 
   ```
-  FROM ubuntu
+  FROM ubuntu:24.10
   CMD ["/usr/bin/wc","--help"]
   ```
 
@@ -251,7 +251,7 @@ A Dockerfile is similar to a Makefile.
   `/bin/sh -c`, like a **CMD** instruction:
 
   ```
-  FROM ubuntu
+  FROM ubuntu:24.10
   ENTRYPOINT wc -l -
   ```
 
@@ -260,7 +260,7 @@ A Dockerfile is similar to a Makefile.
   make this optional but default, use a **CMD**:
 
   ```
-  FROM ubuntu
+  FROM ubuntu:24.10
   CMD ["-l", "-"]
   ENTRYPOINT ["/usr/bin/wc"]
   ```
